@@ -1,10 +1,20 @@
 import { NgModule } from "@angular/core";
+
 import { Routes, RouterModule } from "@angular/router";
-import { MainComponent } from "./main.component";
+
+
+
 import { SketchListComponent } from "./sketch-list/sketch-list.component";
+
+import { MainComponent } from "./main.component";
+
 import { MySketchListComponent } from "./my-sketch-list/my-sketch-list.component";
+
 import { CreateSketchComponent } from "./create-sketch/create-sketch.component";
+
 import { SketchInfoComponent } from "./sketch-info/sketch-info.component";
+
+
 
 const routes: Routes = [
 
@@ -42,7 +52,7 @@ const routes: Routes = [
 
       {
 
-        path: "sketch",
+        path: "sketch/:id",
 
         component: SketchInfoComponent,
 

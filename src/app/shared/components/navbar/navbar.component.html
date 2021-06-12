@@ -20,18 +20,44 @@
 
 
 
-  <a class="ss-navbar__user" routerLink="/main/my-sketch-list">
+  <div class="dropdown show">
 
-    <img
+    <a
 
-      src="https://lh3.googleusercontent.com/a-/AOh14GgbWncK57PoXnKOxZPvFkny7JZSQXN_zOK7skG4AQ"
+      class="ss-navbar__user"
 
-      alt=""
+      role="button"
 
-    />
+      id="dropdownMenuLink"
 
-    <span class="ss-navbar__user-name">Stephen </span>
+      data-toggle="dropdown"
 
-  </a>
+      aria-haspopup="true"
+
+      aria-expanded="false"
+
+    >
+
+      <img [src]="user?.photoURL" alt="" />
+
+      <span class="ss-navbar__user-name">{{ user?.displayName }} </span>
+
+    </a>
+
+
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+      <a class="dropdown-item" routerLink="/main/my-sketch-list" href="#"
+
+        >My Sketches</a
+
+      >
+
+      <a class="dropdown-item" (click)="signOut()">Logout</a>
+
+    </div>
+
+  </div>
 
 </nav>
